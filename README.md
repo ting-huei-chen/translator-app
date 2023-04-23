@@ -30,7 +30,7 @@ export OPENAI_API_KEY=<your-openai-api-key>
 4. Run the app:
 
 ```
-npm start
+node app.js
 ```
 
 5. Open your web browser and go to `http://localhost:3000` to access the app.
