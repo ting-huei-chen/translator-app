@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Noto+Sans+KR:wght@100;400;700&family=Noto+Sans+TC:wght@100;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans KR' sans-serif;
+}
+
+/* .textfield{
+
+} */

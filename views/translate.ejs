@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate!</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+        <h1><a href="/">Translate!</a></h1>
+        <p>Powered by GPT-3</p>
+    </header>
+    <main>
+        <form action="/translate" method="post" class="textfield">
+            <label for="inputValue" class="h2">From</label>
+            <textarea name="inputValue" id="inputValue" cols="35" rows="5" required><%= inputValue %></textarea>
+            <select name="inputLanguage" id="inputLanguage" required>
+                <option selected="selected" disabled>--Translate to--</options>
+                <option value="English" <% if(language == 'English'){ %>selected="selected" <% } %> >English</options>
+                <option value="French" <% if(language == 'French'){ %>selected="selected" <% } %> >French</options>
+                <option value="Japanese" <% if(language == 'Japanese'){ %>selected="selected" <% } %> >Japanese</options>
+                <option value="Traditional Chinese" <% if(language == 'Traditional Chinese'){ %>selected="selected" <% } %> >Traditional Chinese</options>
+                <option value="Swedish" <% if(language == 'Swedish'){ %>selected="selected" <% } %> >Swedish</options>
+                <option value="Thai" <% if(language == 'Thai'){ %>selected="selected" <% } %> >Thai</option>
+            </select>
+            <input type="submit" value="GO">
+        </form>
+        <section class="textfield">
+            <h2>To</h2>
+            <!-- <p>Input: <%= inputValue %></p> -->
+            <p><%= translation %></p>
+        </section>
+    </main>
+    
+  </body>
+</html>

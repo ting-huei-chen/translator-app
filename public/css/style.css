@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Noto+Sans+KR:wght@100;400;700&family=Noto+Sans+TC:wght@100;400;700&family=Noto+Sans+Thai:wght@100;400;700&display=swap');
+
+:root {
+    --theme: #8E72FF;
+    --neutral: #D9D9D9;
+    --light: #F5F5F5;
+    --textDark: #000000;
+    --bg: #fff;
+    --gradient: linear-gradient(322deg, rgba(36, 36, 36, 1) 45%, rgba(0, 0, 0, 1) 100%);
+    --gradientHover: linear-gradient(322deg, rgba(142, 114, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+* {
+    /* border: solid 1px red; */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+select,
+textarea,
+label {
+    font-family: 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Thai', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+header {
+    padding: 1rem 2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--textDark);
+}
+
+header p {
+    font-size: small;
+    margin: 0;
+}
+
+h1 {
+    margin: .5rem 0 0;
+}
+
+main {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+main form,
+main section {
+    flex: 1;
+    padding: 1.75rem;
+    position: relative;
+    min-height: 40vh;
+}
+
+.textfield {
+    border-radius: 1.5rem;
+}
+
+main form {
+    background-color: var(--neutral);
+}
+
+main section {
+    background-color: var(--theme);
+}
+
+main section p {
+    color: var(--light);
+}
+
+
+
+h2,
+.h2 {
+    display: block;
+    font-size: small;
+    margin: .5rem 0;
+    font-weight: 700;
+}
+
+#inputValue,
+.textfield p {
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+    background-color: unset;
+    border: none;
+    outline: none;
+}
+
+input {
+    display: block;
+
+}
+
+input[type=submit] {
+    padding: 1.5rem;
+    border-radius: 3rem;
+    background: var(--gradient);
+    color: var(--light);
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type=submit]:hover {
+    transform: translateY(-5px);
+    background: var(--gradientHover);
+    cursor: pointer;
+}
+
+
+textarea:focus {
+    outline: none;
+    border: none;
+}
+
+select {
+    border-radius: 1rem;
+    background-color: var(--light);
+    border: 2px solid var(--neutral);
+}
+
+select:focus {
+    outline: solid 3px var(--theme);
+}
+
+#inputLanguage {
+    padding: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+}
+
+@media screen and (max-width:800px) {
+    main {
+        flex-direction: column;
+    }
+
+    main form,
+    main section {
+        position: static;
+    }
+
+    #inputValue {
+        width: 100%;
+    }
+
+    #inputLanguage {
+        position: fixed;
+        width: 50vw;
+        margin: 0;
+        bottom: 3rem;
+        left: 3rem;
+        border-radius: 1.75rem;
+        border: none;
+    }
+
+    input[type=submit] {
+        position: fixed;
+        margin: 0;
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    header {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    main {
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    #inputLanguage {
+        bottom: 8vh;
+    }
+
+    input[type=submit] {
+        bottom: 8vh;
+    }
+}
